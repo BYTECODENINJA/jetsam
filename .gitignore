@@ -1,5 +1,147 @@
-/target
-**/*.rs.bk
-*.swp
+# Rust
+/target/
+**/target/
+debug/
+release/
+
+# Keep Cargo.lock for applications/workspaces
+# Cargo.lock
+
+# Rust compiler/backtrace/profiling artifacts
+*.pdb
+*.profraw
+*.profdata
+*.gcda
+*.gcno
+
+# Node / npm
+node_modules/
+**/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Package-manager caches
+.npm/
+.pnpm-store/
+.yarn/
+!.yarn/releases/
+!.yarn/plugins/
+!.yarn/sdks/
+!.yarn/versions/
+
+# SvelteKit / Vite
+.svelte-kit/
+**/.svelte-kit/
+dist/
+**/dist/
+build/
+**/build/
+.vite/
+**/.vite/
+vite.config.*.timestamp-*
+vite.config.*.mjs
+
+# Tauri generated/build artifacts
+**/src-tauri/target/
+**/src-tauri/gen/
+**/src-tauri/.cargo/
+**/src-tauri/.tauri/
+**/src-tauri/tauri.conf.local.json
+
+# Project-generated app artifacts
+crates/jetsam-app/gen/
+crates/jetsam-app/dist/
+
+# Logs
+logs/
+*.log
+*.log.*
+*.out
+*.err
+
+# Environment files / secrets
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# Local config
+*.local
+*.local.*
+.local/
+
+# OS files
 .DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Editor / IDE files
 .idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# JetBrains: keep shared project config only if you intentionally commit it
+# If you want to commit some .idea files, remove `.idea/` above and use:
+# .idea/*
+# !.idea/vcs.xml
+# !.idea/modules.xml
+# !.idea/codeStyles/
+# !.idea/codeStyles/*
+
+# TypeScript
+*.tsbuildinfo
+
+# Coverage
+coverage/
+*.lcov
+.nyc_output/
+
+# Test artifacts
+junit.xml
+test-results/
+playwright-report/
+
+# Temporary files
+tmp/
+temp/
+.cache/
+**/.cache/
+
+# Archives / packaged output
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# Native build artifacts
+*.o
+*.obj
+*.so
+*.dylib
+*.dll
+*.a
+*.lib
+*.exe
+
+# macOS app bundles / Linux packages / Windows installer outputs
+*.app/
+*.deb
+*.rpm
+*.AppImage
+*.msi
+*.dmg

@@ -1,1 +1,0 @@
-import{a as s,f as p,s as m}from"./DcumPXP1.js";import{G as f,J as n}from"./CaKw8u8m.js";import{b as l}from"./i7igeM2m.js";import{p as i}from"./BmSGHAYa.js";var _=p("<span> </span>");function b(e,a){let o=i(a,"tone",3,"neutral");var t=_(),r=n(t,!0);f(()=>{l(t,1,`badge ${o()??""}`,"svelte-dtbgkf"),m(r,a.text)}),s(e,t)}export{b as B};

@@ -1,0 +1,18 @@
+[package]
+name = "jetsam-helper"
+description = "Privileged helper: runs trusted pacman operations on behalf of the Jetsam GUI"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
+
+[[bin]]
+name = "jetsam-helper"
+path = "src/main.rs"
+
+[dependencies]
+jetsam-core = { path = "../jetsam-core", default-features = false }
+serde.workspace = true
+serde_json.workspace = true

@@ -1,0 +1,34 @@
+[package]
+name = "jetsam-app"
+description = "Jetsam GUI (Tauri v2 + Svelte 5)"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
+
+[lib]
+name = "jetsam_app_lib"
+crate-type = ["lib", "cdylib", "staticlib"]
+path = "src-tauri/src/lib.rs"
+
+[[bin]]
+name = "jetsam-app"
+path = "src-tauri/src/main.rs"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = ["tray-icon", "image-png"] }
+tauri-plugin-shell = "2"
+tauri-plugin-dialog = "2"
+tauri-plugin-notification = "2"
+tauri-plugin-process = "2"
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+jetsam-core = { path = "../jetsam-core" }
+jetsam-daemon = { path = "../jetsam-daemon" }
+tokio = { version = "1", features = ["rt-multi-thread", "macros"] }

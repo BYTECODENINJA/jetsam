@@ -1,0 +1,37 @@
+[Unit]
+Description=Jetsam usage collector
+Documentation=https://github.com/jetsam-dev/jetsam
+PartOf=graphical-session.target
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/jetsamd run
+Restart=on-failure
+RestartSec=5s
+# Resource limits keep the daemon small and predictable.
+MemoryMax=32M
+CPUQuota=5%
+
+# The daemon writes only under the user's XDG directories and runtime.
+ProtectHome=read-only
+ProtectSystem=strict
+PrivateTmp=true
+PrivateDevices=true
+ProtectKernelTunables=true
+ProtectControlGroups=true
+ProtectClock=true
+ProtectHostname=true
+RestrictRealtime=true
+RestrictSUIDSGID=true
+LockPersonality=true
+NoNewPrivileges=true
+
+# Let it write to its allowed directories.
+ReadWritePaths=%t/jetsam %h/.config/jetsam %h/.local/share/jetsam %h/.local/state/jetsam
+
+Environment=JETSAM_LOG=info
+Environment=XDG_RUNTIME_DIR=%t
+
+[Install]
+WantedBy=graphical-session.target

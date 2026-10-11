@@ -1,0 +1,21 @@
+[package]
+name = "jetsam-core"
+description = "Core domain logic for Jetsam: alpm inventory, ownership index, classification, cleanup scoring"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+authors.workspace = true
+
+[features]
+default = ["libalpm"]
+# Enables the live libalpm-backed Backend implementation. Pure domain logic
+# (classification, scoring, graph, ownership) compiles and tests without it,
+# which keeps CI and non-Arch development machines happy.
+libalpm = ["dep:alpm"]
+
+[dependencies]
+thiserror.workspace = true
+serde.workspace = true
+alpm = { workspace = true, optional = true }

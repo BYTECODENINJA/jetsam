@@ -1,0 +1,24 @@
+{
+	"/": [
+		"src/routes/+layout.ts",
+		"src/routes/+layout.ts"
+	],
+	"/cleanup": [
+		"src/routes/+layout.ts"
+	],
+	"/onboarding": [
+		"src/routes/+layout.ts"
+	],
+	"/packages": [
+		"src/routes/+layout.ts"
+	],
+	"/package": [
+		"src/routes/+layout.ts"
+	],
+	"/settings": [
+		"src/routes/+layout.ts"
+	],
+	"/updates": [
+		"src/routes/+layout.ts"
+	]
+}
